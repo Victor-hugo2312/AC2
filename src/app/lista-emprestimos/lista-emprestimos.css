@@ -1,0 +1,102 @@
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.contadores {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.card-emprestimo {
+    background-color: #ffe0b2;
+    border: 1px solid #ffb74d;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+.card-emprestimo.devolvido {
+    background-color: #fce4ec;
+    border-color: #f48fb1;
+    color: #6c757d;
+}
+
+.titulo-livro.riscado {
+    text-decoration: line-through;
+}
+
+.status {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 3px 8px;
+    border-radius: 12px;
+    background-color: #ffb74d;
+    color: #4e342e;
+    font-weight: bold;
+}
+
+.status-devolvido {
+    background-color: #f48fb1;
+    color: #4a1028;
+}
+
+.btn-devolver {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.btn-devolver:disabled {
+    cursor: not-allowed;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.btn-remover {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.aviso-vazio {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 20px;
+}
+
+.link-nav {
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 520px) {
+    .card-emprestimo {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .acoes {
+        display: flex;
+        gap: 8px;
+    }
+}

@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Cadastrar Nova Emprestimo</h2>
+
+    <form (submit)="cadastrar(); $event.preventDefault()">
+        <div class="form-group">
+            <label>Título:</label>
+            <input type="text" [(ngModel)]="tituloLivro" name="tituloLivro" placeholder="Digite o título do Livro"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label>Nome da pessoa:</label>
+            <input type="text" [(ngModel)]="nomePessoa" name="nomePessoa" placeholder="Digite o nome da pessoa"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label> Data Prevista de Devolução </label>
+            <input type="date" [(ngModel)]="dataPrevistaDevolucao" name="dataPrevistaDevolucao" required>
+        </div>
+
+        <button type="submit"
+            [disabled]="!tituloLivro.trim() || !nomePessoa.trim() || !dataPrevistaDevolucao">Cadastrar</button>
+    </form>
+
+    <p class="link-nav">
+        <a routerLink="/lista">Ver Lista de Emprestimos</a>
+    </p>
+</div>
